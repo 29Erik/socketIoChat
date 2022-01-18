@@ -1,0 +1,4 @@
+## Folder of the IDE
+.idea
+./node_modules
+./vscode
