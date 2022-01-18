@@ -3,11 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Chat Socket IO</title>
+    <!-- Font family Nunito from Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,200&display=swap" rel="stylesheet">
     <!--Use of CSS file-->
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <h1>Chat Socket IO</h1>
+
+    <div id="chatContainer">
+        <div id="chatWindow">
+            <div id="output">
+
+            </div>
+            <div id="actions">
+
+            </div>
+        </div>
+
+        <input type="text" id="username" placeholder="Username">
+        <input type="text" id="message" placeholder="Message">
+
+        <button id="Send">Send</button>
+    </div>
 
     <!--Use of Socket IO file to use in the client-->
     <script src="/socket.io/socket.io.js" charset="utf-8"></script>
