@@ -28,6 +28,8 @@ const io = socketIo(server);
 // Websockets
 
 // Cpnnection of a new User
-io.on('connection', () => {
-    console.log(`New Connection`);
+// Socket is the variable used in the client
+// More specific in chat.js
+io.on('connection', (socket) => {
+    console.log(`New Connection: ${socket.id}`);
 });
