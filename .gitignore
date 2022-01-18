@@ -1,4 +1,5 @@
 ## Folder of the IDE
 .idea
-/node_modules
 /vscode
+## Dependencies
+node_modules
