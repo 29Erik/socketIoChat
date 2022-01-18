@@ -32,4 +32,16 @@ const io = socketIo(server);
 // More specific in chat.js
 io.on('connection', (socket) => {
     console.log(`New Connection: ${socket.id}`);
+
+    // Receive the event from the client
+    socket.on('chat:message', (data) => {
+        // Event from the server
+        io.sockets.emit('chat:message:server', data);
+    });
+
+    // Receive the event from the client when someone is typing
+    socket.on('chat:typing', (data) => {
+        // Event from the server, broadcast it's everybody but not me
+        socket.broadcast.emit('chat:typing:server', data);
+    });
 });
